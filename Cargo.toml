@@ -1,0 +1,23 @@
+[package]
+name = "axplat-riscv64-visionfive2"
+version = "0.1.0"
+edition = "2024"
+publish = ["crates-io"]
+
+[features]
+fp-simd = ["axcpu/fp-simd"]
+irq = ["axplat/irq"]
+rtc = ["dep:riscv_goldfish"]
+smp = ["axplat/smp"]
+
+[dependencies]
+axconfig-macros = "0.2"
+axcpu = "0.2"
+axplat = "0.1"
+log = "0.4"
+riscv = "0.14"
+riscv_goldfish = { version = "0.1", optional = true }
+sbi-rt = { version = "0.0.3", features = ["legacy"] }
+
+[package.metadata.docs.rs]
+targets = ["riscv64gc-unknown-none-elf"]
