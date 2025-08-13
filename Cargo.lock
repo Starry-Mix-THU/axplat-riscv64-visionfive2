@@ -115,14 +115,12 @@ dependencies = [
 [[package]]
 name = "axplat"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c86cdb48cf1fbd432f4326ab0852b696ac49442b0ea0aed3401cb0bbe370a19f"
+source = "git+https://github.com/Starry-Mix-THU/axplat_crates.git?rev=799fb62#799fb628bddc1ff0a50341ef9d8d4262f6eb7e52"
 dependencies = [
  "axplat-macros",
  "bitflags 2.9.1",
  "const-str",
  "crate_interface",
- "handler_table",
  "kspin",
  "memory_addr",
 ]
@@ -145,7 +143,9 @@ dependencies = [
  "axconfig-macros",
  "axcpu",
  "axplat",
+ "lazyinit",
  "log",
+ "plic",
  "riscv",
  "riscv_goldfish",
  "sbi-rt",
@@ -255,12 +255,6 @@ name = "equivalent"
 version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
-
-[[package]]
-name = "handler_table"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "702cb690200d6303c1e1992bc648f3f3bf9c1d6a27fcf50551c513d61f339c99"
 
 [[package]]
 name = "hashbrown"
@@ -433,6 +427,11 @@ dependencies = [
  "quote",
  "syn",
 ]
+
+[[package]]
+name = "plic"
+version = "0.1.0"
+source = "git+https://github.com/os-module/plic.git?rev=1a71425#1a714257a15595612ba74b83062481ef31c68c34"
 
 [[package]]
 name = "proc-macro2"

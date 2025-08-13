@@ -57,3 +57,5 @@ timer-irq = "0x8000_0000_0000_0005"             # uint
 
 # VisionFive 2 RTC
 rtc-paddr = 0x17040000                          # uint
+
+plic-base = 0xc000000

@@ -13,11 +13,13 @@ smp = ["axplat/smp"]
 [dependencies]
 axconfig-macros = "0.2"
 axcpu = "0.2"
-axplat = "0.1"
+axplat = { git = "https://github.com/Starry-Mix-THU/axplat_crates.git", rev = "799fb62" }
 log = "0.4"
 riscv = "0.14"
 riscv_goldfish = { version = "0.1", optional = true }
 sbi-rt = { version = "0.0.3", features = ["legacy"] }
+plic = { git = "https://github.com/os-module/plic.git", rev = "1a71425" }
+lazyinit = "0.2"
 
 [package.metadata.docs.rs]
 targets = ["riscv64gc-unknown-none-elf"]
