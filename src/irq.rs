@@ -182,7 +182,7 @@ impl IrqIf for IrqIfImpl {
                 // TODO: hart
                 let irq = PLIC.claim(0, Mode::Supervisor);
                 if !IRQ_HANDLER_TABLE.handle(irq as _) {
-                    warn!("Unhandled IRQ {}", irq);
+                    warn!("Unhandled IRQ {irq}");
                 }
                 PLIC.complete(0, Mode::Supervisor, irq);
             },

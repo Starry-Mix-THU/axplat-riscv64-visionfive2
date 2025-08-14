@@ -13,7 +13,7 @@ smp = ["axplat/smp"]
 [dependencies]
 axconfig-macros = "0.2"
 axcpu = "0.2"
-axplat = { git = "https://github.com/Starry-Mix-THU/axplat_crates.git", rev = "799fb62" }
+axplat = "0.1"
 log = "0.4"
 riscv = "0.14"
 riscv_goldfish = { version = "0.1", optional = true }
@@ -23,3 +23,6 @@ lazyinit = "0.2"
 
 [package.metadata.docs.rs]
 targets = ["riscv64gc-unknown-none-elf"]
+
+[patch.crates-io]
+axplat = { git = "https://github.com/Starry-Mix-THU/axplat_crates.git" }
