@@ -115,7 +115,7 @@ dependencies = [
 [[package]]
 name = "axplat"
 version = "0.1.0"
-source = "git+https://github.com/Starry-Mix-THU/axplat_crates.git#93dfeb61d848fa902b12e2cc20e9cd0d14710cf9"
+source = "git+https://github.com/Starry-Mix-THU/axplat_crates.git#1a42cb064d340d7e00e7f83f6a172144c8c60a7a"
 dependencies = [
  "axplat-macros",
  "bitflags 2.9.1",
@@ -143,12 +143,14 @@ dependencies = [
  "axconfig-macros",
  "axcpu",
  "axplat",
+ "kspin",
  "lazyinit",
  "log",
  "plic",
  "riscv",
  "riscv_goldfish",
  "sbi-rt",
+ "uart_16550",
 ]
 
 [[package]]
@@ -431,7 +433,7 @@ dependencies = [
 [[package]]
 name = "plic"
 version = "0.1.0"
-source = "git+https://github.com/os-module/plic.git?rev=1a71425#1a714257a15595612ba74b83062481ef31c68c34"
+source = "git+https://github.com/Starry-Mix-THU/plic.git?rev=ee40f86#ee40f86b888280f291af815874e5f3cee9ee3b94"
 
 [[package]]
 name = "proc-macro2"
@@ -584,6 +586,17 @@ name = "toml_write"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5d99f8c9a7727884afe522e9bd5edbfc91a3312b36a77b5fb8926e4c31a41801"
+
+[[package]]
+name = "uart_16550"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "94d293f51425981fdb1b766beae254dbb711a17e8c4b549dc69b9b7ee0d478d5"
+dependencies = [
+ "bitflags 2.9.1",
+ "rustversion",
+ "x86",
+]
 
 [[package]]
 name = "unicode-ident"

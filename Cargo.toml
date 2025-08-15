@@ -2,24 +2,28 @@
 name = "axplat-riscv64-visionfive2"
 version = "0.1.0"
 edition = "2024"
-publish = ["crates-io"]
+keywords = ["arceos", "os", "hal", "embedded", "riscv"]
+categories = ["embedded", "no-std", "hardware-support", "os"]
 
 [features]
 fp-simd = ["axcpu/fp-simd"]
-irq = ["axplat/irq"]
+irq = ["axplat/irq", "dep:plic"]
 rtc = ["dep:riscv_goldfish"]
 smp = ["axplat/smp"]
 
 [dependencies]
-axconfig-macros = "0.2"
-axcpu = "0.2"
-axplat = "0.1"
+kspin = "0.1"
+lazyinit = "0.2"
 log = "0.4"
+plic = { git = "https://github.com/Starry-Mix-THU/plic.git", rev = "ee40f86", optional = true }
 riscv = "0.14"
 riscv_goldfish = { version = "0.1", optional = true }
 sbi-rt = { version = "0.0.3", features = ["legacy"] }
-plic = { git = "https://github.com/os-module/plic.git", rev = "1a71425" }
-lazyinit = "0.2"
+uart_16550 = "0.4.0"
+
+axconfig-macros = "0.2"
+axcpu = "0.2"
+axplat = "0.1"
 
 [package.metadata.docs.rs]
 targets = ["riscv64gc-unknown-none-elf"]
