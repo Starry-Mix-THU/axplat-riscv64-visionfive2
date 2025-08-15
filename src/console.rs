@@ -33,11 +33,11 @@ impl ConsoleIf for ConsoleIfImpl {
             let mut uart = UART.lock();
             match c {
                 b'\n' => {
-                    uart.send(b'\r');
-                    uart.send(b'\n');
+                    uart.send_raw(b'\r');
+                    uart.send_raw(b'\n');
                 }
                 c => {
-                    uart.send(c);
+                    uart.send_raw(c);
                 }
             }
         }
