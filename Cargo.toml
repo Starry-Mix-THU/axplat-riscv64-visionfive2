@@ -15,7 +15,7 @@ smp = ["axplat/smp"]
 kspin = "0.1"
 lazyinit = "0.2"
 log = "0.4"
-plic = { git = "https://github.com/Starry-Mix-THU/plic.git", rev = "ee40f86", optional = true }
+plic = { git = "https://github.com/Starry-OS/plic.git", rev = "ee40f86", optional = true }
 riscv = "0.14"
 riscv_goldfish = { version = "0.1", optional = true }
 sbi-rt = { version = "0.0.3", features = ["legacy"] }
@@ -29,4 +29,4 @@ axplat = "0.1"
 targets = ["riscv64gc-unknown-none-elf"]
 
 [patch.crates-io]
-axplat = { git = "https://github.com/Starry-Mix-THU/axplat_crates.git" }
+axplat = { git = "https://github.com/Starry-OS/axplat_crates.git" }
