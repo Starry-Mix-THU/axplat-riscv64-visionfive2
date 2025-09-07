@@ -1,6 +1,6 @@
 [package]
 name = "axplat-riscv64-visionfive2"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 keywords = ["arceos", "os", "hal", "embedded", "riscv"]
 categories = ["embedded", "no-std", "hardware-support", "os"]
@@ -23,7 +23,7 @@ uart_16550 = "0.4.0"
 
 axconfig-macros = "0.2"
 axcpu = "0.2"
-axplat = "0.1"
+axplat = "0.2"
 
 [package.metadata.docs.rs]
 targets = ["riscv64gc-unknown-none-elf"]

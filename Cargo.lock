@@ -114,8 +114,8 @@ dependencies = [
 
 [[package]]
 name = "axplat"
-version = "0.1.0"
-source = "git+https://github.com/Starry-OS/axplat_crates.git#8f1476ea78832af5f11b7accd9c7ed3bba06ad7c"
+version = "0.2.0"
+source = "git+https://github.com/Starry-OS/axplat_crates.git#7f6968ded05977fe9f1c72fb27b2ad6d0f97d0fa"
 dependencies = [
  "axplat-macros",
  "bitflags 2.9.1",
@@ -138,7 +138,7 @@ dependencies = [
 
 [[package]]
 name = "axplat-riscv64-visionfive2"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "axconfig-macros",
  "axcpu",
